@@ -143,6 +143,11 @@ contract Voting is Ownable {
             "Registering proposals can't be started now"
         );
         workflowStatus = WorkflowStatus.ProposalsRegistrationStarted;
+
+        Proposal memory proposal;
+        proposal.description = "GENESIS";
+        proposalsArray.push(proposal);
+
         emit WorkflowStatusChange(
             WorkflowStatus.RegisteringVoters,
             WorkflowStatus.ProposalsRegistrationStarted
