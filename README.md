@@ -1,1 +1,0 @@
-# Solidity-Alyra-Voting-app
